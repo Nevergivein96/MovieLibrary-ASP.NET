@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Movie_Library_Web.Models.Movie>
+
+<h2>Products</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Genre</th>
+        <th>Rating</th>
+        <th>Rating Scale</th>
+        <th>Series or Movie</th>
+    </tr>
+
+    @foreach (var Movie in @Model)
+    {
+            <tr>
+                <td>@Movie.MovieID</td>
+                <td>@Movie.MovieName</td>
+                <td>@Movie.GenreName</td>
+                <td>@Movie.Rating</td>
+                <td>@Movie.RatingScale</td>
+                <td>@Movie.SeriesOrMovie</td>
+            </tr>
+    }
+
+</table>
